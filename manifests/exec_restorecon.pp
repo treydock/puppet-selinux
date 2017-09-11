@@ -12,7 +12,7 @@
 # @param onlyif see the Exec resource
 #
 define selinux::exec_restorecon(
-  Stdlib::Absolutepath $path        = $title,
+  String $path        = $title,
   Boolean              $refreshonly = true,
   Boolean              $recurse     = true,
   Optional[String]     $unless      = undef,

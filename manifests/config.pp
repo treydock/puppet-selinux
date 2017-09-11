@@ -32,7 +32,7 @@ class selinux::config (
   $type                                   = $::selinux::type,
   $manage_package                         = $::selinux::manage_package,
   $package_name                           = $::selinux::package_name,
-  Stdlib::Absolutepath $module_build_root = $::selinux::module_build_root
+  String $module_build_root = $::selinux::module_build_root
 ) {
 
   if $caller_module_name != $module_name {
